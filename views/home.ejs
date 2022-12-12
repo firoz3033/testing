@@ -1,0 +1,13 @@
+<%- include('header') -%>
+
+<% for( let i = 0; i < data.length; i++ ) { %>
+    <div class="card mx-3 my-3" style="width: 40rem; ">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= data[i].title %> </h5>
+          <p class="card-text"><%= data[i].content.substring(0,100)+'.....' %></p>
+          <a href="/post/<%= data[i].title.replaceAll(' ','-') %>" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+<% } %>
+<%- include('footer') -%> 
